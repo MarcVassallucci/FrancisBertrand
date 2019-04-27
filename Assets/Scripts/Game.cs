@@ -38,8 +38,9 @@ public class Game : MonoBehaviour
             State = GameState.Scene;
             yield return StartCoroutine(PlayNextScene());
 
-            State = GameState.Transition;
             yield return new WaitForSeconds(2f);
+            State = GameState.Transition;
+            yield return new WaitForSeconds(.5f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
             _currentDialogHasAnswer = false;
             _text.text = "";
