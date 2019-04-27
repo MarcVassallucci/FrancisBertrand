@@ -27,6 +27,7 @@ public class EyeClosing : MonoBehaviour
             Time.deltaTime * _fadeSpeed);
 
         _eye.SetBlendShapeWeight(0, Mathf.Lerp(_eye.GetBlendShapeWeight(0), ShouldBeClosed ? 100f : 0f, Time.deltaTime * _fadeSpeed));
+        //_eye.transform.localScale = Vector3.one * Mathf.Lerp(_eye.transform.localScale.x, ShouldBeClosed ? 1f : 1f, Time.deltaTime * _fadeSpeed);
 
         if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
         {
