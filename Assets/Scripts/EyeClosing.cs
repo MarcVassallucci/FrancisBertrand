@@ -38,6 +38,8 @@ public class EyeClosing : MonoBehaviour
 
         //_eye.transform.localScale = Vector3.one * Mathf.Lerp(_eye.transform.localScale.x, ShouldBeClosed ? 1f : 1f, Time.deltaTime * _fadeSpeed);
 
+        _energyBar.SetIsInDanger(!ShouldBeClosed);
+
         if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
         {
             _usedTime += Time.deltaTime;
