@@ -15,27 +15,30 @@ public class Game : MonoBehaviour
     [SerializeField] float _timeBetweenScenes = 3f;
     [SerializeField] TextMeshProUGUI _text = null;
 
-    GameState _state = GameState.Scene;
+    GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
 
     int _index = 1;
+    Dialog _currentDialog = null;
+    bool _currentDialogHasAnswer = false;
 
-    private void Start()
+    void Start()
     {
         StartCoroutine(Play());
     }
 
     IEnumerator Play()
     {
+        yield return new WaitForSeconds(_timeBetweenScenes);
+
         while (true)
         {
             State = GameState.Scene;
             yield return StartCoroutine(PlayNextScene());
 
             State = GameState.Transition;
-            yield return new WaitForSeconds(_timeBetweenScenes);
-
             SceneManager.UnloadSceneAsync("Scene" + _index);
+            yield return new WaitForSeconds(_timeBetweenScenes);
 
             ++_index;
 
@@ -51,11 +54,31 @@ public class Game : MonoBehaviour
     IEnumerator PlayNextScene()
     {
         SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
+        
+        _currentDialog = Resources.Load<Dialog>("Scene" + _index);
+        _text.text = _currentDialog.Question;
 
-        Dialog SceneDialog = Resources.Load<Dialog>("Scene" + _index);
-        _text.text = SceneDialog.Question;
-        yield return new WaitForSeconds(SceneDialog.Duration);
-        _text.text = "";
+        float TimeSinceQuestion = 0f;
+        while (true)
+        {
+            if (TimeSinceQuestion > _currentDialog.Duration)
+            {
+                _text.text = _currentDialog.NoAnswer.Reaction;
+                break;
+            }
+
+            if (_currentDialogHasAnswer == true)
+            {
+                break;
+            }
+
+            yield return null;
+            TimeSinceQuestion += Time.deltaTime;
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        _currentDialogHasAnswer = false;
     }
 
     public void LoadFinalScene()
@@ -66,6 +89,7 @@ public class Game : MonoBehaviour
         {
             return;
         }
+
 
         // interrupt possibly running scene
 
@@ -83,5 +107,15 @@ public class Game : MonoBehaviour
         SceneManager.LoadSceneAsync("FinalScene", LoadSceneMode.Additive);
         _text.text = "";
         _index = -1;
+        State = GameState.Over;
+    }
+
+    public void OnAnswer(bool IsYes)
+    {
+        if (State != GameState.Scene || _currentDialogHasAnswer == true)
+            return;
+
+        _currentDialogHasAnswer = true;
+        _text.text = IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction;
     }
 }

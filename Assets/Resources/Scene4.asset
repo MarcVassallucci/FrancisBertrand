@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: Scene4
   m_EditorClassIdentifier: 
   Question: Do you want to play with us? FOREVER AND EVER
+  Duration: 5
+  Yes:
+    Reaction: Je savais que tu comprendrais.
+  No:
+    Reaction: Tu es un monstre. Je te deteste.
+  NoAnswer:
+    Reaction: Je ne pense pas qu'il puisse nous entendre...

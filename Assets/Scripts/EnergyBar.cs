@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class EnergyBar : MonoBehaviour
 {
-    [SerializeField]
-    RectTransform _innerImage;
+    [SerializeField] RectTransform _innerImage = null;
     
     public void SetRatio(float Ratio)
     {
