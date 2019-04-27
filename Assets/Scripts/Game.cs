@@ -105,7 +105,7 @@ public class Game : MonoBehaviour
         // load final scene
 
         State = GameState.Over;
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync("FinalScene");
     }
 
     public void OnAnswer(bool IsYes)
