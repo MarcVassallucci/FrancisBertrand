@@ -6,34 +6,61 @@ using TMPro;
 
 public class Game : MonoBehaviour
 {
-    [SerializeField]
-    TextMeshProUGUI Text = null;
-
+    [SerializeField] TextMeshProUGUI Text = null;
+    
     int _index = 1;
 
     private void Start()
     {
-        LoadNewScene();
-
         StartCoroutine(Play());
     }
 
     IEnumerator Play()
     {
-        while (Application.CanStreamedLevelBeLoaded("Scene" + (_index + 1)))
+        yield return StartCoroutine(PlayNextScene());
+
+        while (true)
         { 
-            yield return new WaitForSeconds(2f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
 
             ++_index;
 
-            LoadNewScene();
-        }
-    }
+            if (!Application.CanStreamedLevelBeLoaded("Scene" + _index))
+            {
+                break;
+                
+            }
 
-    void LoadNewScene()
+            yield return StartCoroutine(PlayNextScene());
+        }
+
+        LoadFinalScene();
+    }
+    
+    IEnumerator PlayNextScene()
     {
         SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
-        Text.text = Resources.Load<Dialog>("Scene" + _index).Question;
+
+        Dialog SceneDialog = Resources.Load<Dialog>("Scene" + _index);
+        Text.text = SceneDialog.Question;
+        yield return new WaitForSeconds(SceneDialog.Duration);
+    }
+
+    public void LoadFinalScene()
+    {
+        StopAllCoroutines();
+
+        // unload current scene
+
+        if (SceneManager.GetSceneByName("Scene" + _index).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync("Scene" + _index);
+        }
+
+        // load final scene
+
+        SceneManager.LoadSceneAsync("FinalScene", LoadSceneMode.Additive);
+        Text.text = "";
+        _index = -1;
     }
 }
