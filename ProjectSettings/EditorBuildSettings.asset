@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PersistentScene.unity
     guid: ef825fd13fdb4cc4d92b1a44960a633d
   - enabled: 1
-    path: Assets/Scenes/Room.unity
-    guid: 990c496d2e2a15144a6c9663656aa40e
-  - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: d656fc0fddbd3894dad014df54902643
   - enabled: 1

@@ -26,8 +26,6 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        SceneManager.LoadScene("Room", LoadSceneMode.Additive);
-
         StartCoroutine(Play());
     }
 

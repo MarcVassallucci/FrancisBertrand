@@ -10,6 +10,7 @@ public class EyeClosing : MonoBehaviour
     [SerializeField] EnergyBar _energyBar = null;
     [SerializeField] Game _game = null;
     [SerializeField] Image _blackOverlay = null;
+    [SerializeField] SkinnedMeshRenderer _eye = null;
 
     float _usedTime = 0;
 
@@ -24,6 +25,8 @@ public class EyeClosing : MonoBehaviour
         _blackOverlay.color = Color.Lerp(_blackOverlay.color,
             ShouldBeClosed ? Color.black : new Color(0f, 0f, 0f, 0f),
             Time.deltaTime * _fadeSpeed);
+
+        _eye.SetBlendShapeWeight(0, Mathf.Lerp(_eye.GetBlendShapeWeight(0), ShouldBeClosed ? 100f : 0f, Time.deltaTime * _fadeSpeed));
 
         if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
         {
