@@ -7,6 +7,7 @@ public class EyeClosing : MonoBehaviour
 {
     [SerializeField] float _totalTime = 5f;
     [SerializeField] float _fadeSpeed = 7f;
+    [SerializeField] float _eyeShakeAmplitude = 0.0025f;
     [SerializeField] EnergyBar _energyBar = null;
     [SerializeField] Game _game = null;
     [SerializeField] Image _blackOverlay = null;
@@ -25,8 +26,16 @@ public class EyeClosing : MonoBehaviour
         _blackOverlay.color = Color.Lerp(_blackOverlay.color,
             ShouldBeClosed ? Color.black : new Color(0f, 0f, 0f, 0f),
             Time.deltaTime * _fadeSpeed);
+        
+        _eye.SetBlendShapeWeight(0, Mathf.Lerp(_eye.GetBlendShapeWeight(0), 
+            ShouldBeClosed ? 100f : 0f, 
+            Time.deltaTime * _fadeSpeed));
+        
+        _eye.transform.localPosition = new Vector3(
+            Random.Range(-_eyeShakeAmplitude, _eyeShakeAmplitude), 
+            Random.Range(-_eyeShakeAmplitude, _eyeShakeAmplitude), 
+            _eye.transform.localPosition.z);
 
-        _eye.SetBlendShapeWeight(0, Mathf.Lerp(_eye.GetBlendShapeWeight(0), ShouldBeClosed ? 100f : 0f, Time.deltaTime * _fadeSpeed));
         //_eye.transform.localScale = Vector3.one * Mathf.Lerp(_eye.transform.localScale.x, ShouldBeClosed ? 1f : 1f, Time.deltaTime * _fadeSpeed);
 
         if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
