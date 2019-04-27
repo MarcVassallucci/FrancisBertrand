@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -10,20 +11,24 @@ public enum GameState
     Transition,
     Over
 }
+
 public class Game : MonoBehaviour
 {
     [SerializeField] float _timeBetweenScenes = 3f;
     [SerializeField] TextMeshProUGUI _text = null;
+    [SerializeField] Button _startButton = null;
 
     GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
 
     int _index = 1;
-    Dialog _currentDialog = null;
+    Dialog _currentDialog = null;   
     bool _currentDialogHasAnswer = false;
 
     void Start()
     {
+        SceneManager.LoadScene("Room", LoadSceneMode.Additive);
+
         StartCoroutine(Play());
     }
 
@@ -85,12 +90,11 @@ public class Game : MonoBehaviour
     {
         // only run once
 
-        if (_index < 0)
+        if (State == GameState.Over)
         {
             return;
         }
-
-
+        
         // interrupt possibly running scene
 
         StopAllCoroutines();
@@ -104,10 +108,8 @@ public class Game : MonoBehaviour
 
         // load final scene
 
-        SceneManager.LoadSceneAsync("FinalScene", LoadSceneMode.Additive);
-        _text.text = "";
-        _index = -1;
         State = GameState.Over;
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 
     public void OnAnswer(bool IsYes)

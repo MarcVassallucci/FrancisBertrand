@@ -17,8 +17,9 @@ public class EyeClosing : MonoBehaviour
 
     void Update()
     {
-        _blackOverlay.enabled = _game.State == GameState.Transition || !Input.GetKey(KeyCode.Space);
-
+        _blackOverlay.enabled = _game.State != GameState.Scene 
+            || Input.GetKey(KeyCode.Space) == false;
+        
         if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
         {
             _usedTime += Time.deltaTime;
@@ -27,7 +28,6 @@ public class EyeClosing : MonoBehaviour
             if (_usedTime >= _totalTime)
             {
                 _game.LoadFinalScene();
-                enabled = false;
             }
         }
     }
