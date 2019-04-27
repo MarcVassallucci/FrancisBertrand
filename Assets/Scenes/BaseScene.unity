@@ -1745,6 +1745,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094598937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
+    type: 3}
+  m_PrefabInstance: {fileID: 6766146187233506110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb7ce16810e77a438a7250edc799085, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2187859977155271202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1936,6 +1948,16 @@ PrefabInstance:
       propertyPath: Text
       value: 
       objectReference: {fileID: 1456122978}
+    - target: {fileID: 6766146186500093990, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _text
+      value: 
+      objectReference: {fileID: 1456122978}
+    - target: {fileID: 6766146186500093990, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _eyeClosing
+      value: 
+      objectReference: {fileID: 2094598937}
     - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
       propertyPath: _energyBar
@@ -1946,5 +1968,10 @@ PrefabInstance:
       propertyPath: _blackOverlay
       value: 
       objectReference: {fileID: 274990897}
+    - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _totalTime
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43bd1f986a41fb64780133c803a27921, type: 3}

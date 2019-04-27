@@ -4,10 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+public enum GameState
+{
+    Scene,
+    Transition,
+    Over
+}
 public class Game : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI Text = null;
-    
+    [SerializeField] float _timeBetweenScenes = 3f;
+    [SerializeField] TextMeshProUGUI _text = null;
+
+    GameState _state = GameState.Scene;
+    public GameState State { get => _state; private set => _state = value; }
+
     int _index = 1;
 
     private void Start()
@@ -17,10 +27,14 @@ public class Game : MonoBehaviour
 
     IEnumerator Play()
     {
-        yield return StartCoroutine(PlayNextScene());
-
         while (true)
-        { 
+        {
+            State = GameState.Scene;
+            yield return StartCoroutine(PlayNextScene());
+
+            State = GameState.Transition;
+            yield return new WaitForSeconds(_timeBetweenScenes);
+
             SceneManager.UnloadSceneAsync("Scene" + _index);
 
             ++_index;
@@ -28,10 +42,7 @@ public class Game : MonoBehaviour
             if (!Application.CanStreamedLevelBeLoaded("Scene" + _index))
             {
                 break;
-                
             }
-
-            yield return StartCoroutine(PlayNextScene());
         }
 
         LoadFinalScene();
@@ -42,12 +53,22 @@ public class Game : MonoBehaviour
         SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
 
         Dialog SceneDialog = Resources.Load<Dialog>("Scene" + _index);
-        Text.text = SceneDialog.Question;
+        _text.text = SceneDialog.Question;
         yield return new WaitForSeconds(SceneDialog.Duration);
+        _text.text = "";
     }
 
     public void LoadFinalScene()
     {
+        // only run once
+
+        if (_index < 0)
+        {
+            return;
+        }
+
+        // interrupt possibly running scene
+
         StopAllCoroutines();
 
         // unload current scene
@@ -60,7 +81,7 @@ public class Game : MonoBehaviour
         // load final scene
 
         SceneManager.LoadSceneAsync("FinalScene", LoadSceneMode.Additive);
-        Text.text = "";
+        _text.text = "";
         _index = -1;
     }
 }

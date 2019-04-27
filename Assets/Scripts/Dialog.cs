@@ -8,5 +8,5 @@ public class Dialog : ScriptableObject
     [TextArea]
     public string Question = "Est-ce que tu approuves ?";
 
-    public float Duration = 3f;
+    public float Duration = 5f;
 }

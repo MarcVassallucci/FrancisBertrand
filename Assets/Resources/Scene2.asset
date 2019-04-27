@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Scene2
   m_EditorClassIdentifier: 
   Question: Tu aimes les crocodiles ?
+  Duration: 5

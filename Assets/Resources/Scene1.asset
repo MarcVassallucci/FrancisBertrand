@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene1
   m_EditorClassIdentifier: 
-  Lines:
-  - f
-  - frerf
-  - frefre
-  - fref
-  - frefer
+  Question: Est-ce que tu approuves ?
+  Duration: 5
