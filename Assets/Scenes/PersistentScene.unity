@@ -507,6 +507,11 @@ PrefabInstance:
       propertyPath: _startButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6766146186500093990, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _timeBetweenScenes
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
       propertyPath: _energyBar
@@ -520,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
       propertyPath: _totalTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
