@@ -16,7 +16,6 @@ public class Game : MonoBehaviour
 {
     [SerializeField] float _timeBetweenScenes = 3f;
     [SerializeField] TextMeshProUGUI _text = null;
-    [SerializeField] Button _startButton = null;
 
     GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
@@ -42,7 +41,10 @@ public class Game : MonoBehaviour
             yield return StartCoroutine(PlayNextScene());
 
             State = GameState.Transition;
+            yield return new WaitForSeconds(2f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
+            _currentDialogHasAnswer = false;
+            _text.text = "";
             yield return new WaitForSeconds(_timeBetweenScenes);
 
             ++_index;
@@ -80,10 +82,6 @@ public class Game : MonoBehaviour
             yield return null;
             TimeSinceQuestion += Time.deltaTime;
         }
-
-        yield return new WaitForSeconds(2f);
-
-        _currentDialogHasAnswer = false;
     }
 
     public void LoadFinalScene()
