@@ -18,6 +18,7 @@ public class TextController : MonoBehaviour
 
     IEnumerator WriteText(string Text)
     {
+        Character Speaker = null;
         InnerText.text = "";
         
         foreach (var c in Text.Split(' '))
@@ -27,7 +28,20 @@ public class TextController : MonoBehaviour
             AudioSource.clip = AudioClips[Random.Range(0, AudioClips.Length - 1)];
             AudioSource.Play();
 
-            yield return new WaitForSeconds(_delay);
+            if (Speaker == null)
+                Speaker = GameObject.FindObjectOfType<Character>();
+
+            // head animation
+
+            float ElapsedTime = 0f;
+            while (ElapsedTime < _delay)
+            {
+                if (Speaker != null)
+                    Speaker.SetWordNormalizedTime(ElapsedTime / _delay);
+                
+                yield return null;
+                ElapsedTime += Time.deltaTime;
+            }
         }
     }
 }

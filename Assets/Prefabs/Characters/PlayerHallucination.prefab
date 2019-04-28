@@ -689,6 +689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7001808689311578789}
   - component: {fileID: 1126295896145549279}
+  - component: {fileID: 4776726954557810989}
   m_Layer: 0
   m_Name: PlayerHallucination
   m_TagString: Untagged
@@ -731,6 +732,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4776726954557810989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300591125665024182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5e182e8946c5340836f3071b56a794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 1138172283151235852}
 --- !u!1 &6425076966660656599
 GameObject:
   m_ObjectHideFlags: 0

@@ -734,6 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6482696028390856603}
   - component: {fileID: 3998398710219684577}
+  - component: {fileID: 7208387293996902447}
   m_Layer: 0
   m_Name: Regina
   m_TagString: Untagged
@@ -776,6 +777,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7208387293996902447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046930226326037896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5e182e8946c5340836f3071b56a794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 3969883482646566450}
 --- !u!1 &8131552828756236673
 GameObject:
   m_ObjectHideFlags: 0
