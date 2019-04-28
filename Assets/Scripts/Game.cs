@@ -24,6 +24,7 @@ public class Game : MonoBehaviour
     int _index = 1;
     Dialog _currentDialog = null;   
     bool _currentDialogHasAnswer = false;
+    Character _currentSpeaker;
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class Game : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
             _currentDialogHasAnswer = false;
-            _textController.SetText("");
+            _textController.SetText(null, "");
             yield return new WaitForSeconds(_timeBetweenScenes);
 
             ++_index;
@@ -60,19 +61,24 @@ public class Game : MonoBehaviour
     
     IEnumerator PlayNextScene()
     {
-        SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
-        
+        var Async = SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
+        while (Async.isDone == false)
+            yield return null;
+
         _currentDialog = Resources.Load<Dialog>("Scene" + _index);
 
+        _currentSpeaker = GameObject.FindObjectOfType<Character>();
+        _currentSpeaker.SetFace(_currentDialog.FaceIndex);
         _audio.SetActiveTrack(_currentDialog.AudioTrackIndex);
-        _textController.SetText(_currentDialog.Question);
+        _textController.SetText(_currentSpeaker, _currentDialog.Question);
 
         float TimeSinceQuestion = 0f;
         while (true)
         {
             if (TimeSinceQuestion > _currentDialog.Duration)
             {
-                _textController.SetText(_currentDialog.NoAnswer.Reaction);
+                _currentSpeaker.SetFace(_currentDialog.NoAnswer.FaceIndex);
+                _textController.SetText(_currentSpeaker, _currentDialog.NoAnswer.Reaction);
                 break;
             }
 
@@ -118,6 +124,7 @@ public class Game : MonoBehaviour
             return;
 
         _currentDialogHasAnswer = true;
-        _textController.SetText(IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction);
+        _currentSpeaker.SetFace(IsYes ? _currentDialog.Yes.FaceIndex : _currentDialog.No.FaceIndex);
+        _textController.SetText(_currentSpeaker, IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction);
     }
 }

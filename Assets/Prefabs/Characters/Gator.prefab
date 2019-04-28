@@ -725,6 +725,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _head: {fileID: 4526645050237593291}
+  _renderer: {fileID: 692996476937352992}
+  _textures:
+  - {fileID: 2800000, guid: e83c62b285f01a3469ebe568741eef89, type: 3}
+  _materialID: 1
 --- !u!1 &7507557119009738768
 GameObject:
   m_ObjectHideFlags: 0
