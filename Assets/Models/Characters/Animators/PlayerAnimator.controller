@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -4633479208658684258}
-    m_Position: {x: 469.6223, y: 76.280785, z: 0}
+    m_State: {fileID: -4185817180824882916}
+    m_Position: {x: 533.57965, y: 71.60099, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,15 +21,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -4633479208658684258}
---- !u!1102 &-4633479208658684258
+  m_DefaultState: {fileID: -4185817180824882916}
+--- !u!1102 &-4185817180824882916
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerRig|FinalScene03
+  m_Name: PlayerRig|Hallucination
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -42,7 +42,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3395493987423225441, guid: 85be17ec4533ac4418eff73fd11b5bc3,
+  m_Motion: {fileID: -6731499011185911875, guid: 85be17ec4533ac4418eff73fd11b5bc3,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -55,7 +55,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PamAnimator
+  m_Name: PlayerAnimator
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
