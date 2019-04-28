@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 2187859976706671377, guid: 0464389bb8eda0a4ba97953baea13a4d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2187859977062699171, guid: 0464389bb8eda0a4ba97953baea13a4d,
         type: 3}
@@ -804,16 +804,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5614777504734615616, guid: c4a10242015a7574cb389af9cc06fcab,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.119
-      objectReference: {fileID: 0}
-    - target: {fileID: 5614777504734615616, guid: c4a10242015a7574cb389af9cc06fcab,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.923
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a10242015a7574cb389af9cc06fcab, type: 3}
 --- !u!1001 &6766146187233506110
@@ -853,6 +843,11 @@ PrefabInstance:
       propertyPath: _eye
       value: 
       objectReference: {fileID: 198845312}
+    - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _fadeSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6766146186500093993, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
       propertyPath: m_LocalPosition.x
