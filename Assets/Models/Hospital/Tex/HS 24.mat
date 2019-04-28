@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HS 24
-  m_Shader: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 99bb36e9d2c76874e8e8e2baed6debca, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -61,7 +61,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 5
+    - _Glossiness: 0.44
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -75,8 +75,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.3665009, g: 0.28235137, b: 0.4433962, a: 1}
-    - _Color: {r: 0.8867924, g: 0.3908966, b: 0.18823427, a: 1}
+    - _AmbientColor: {r: 0.22607647, g: 0.13656996, b: 0.31132078, a: 1}
+    - _Color: {r: 0.5660378, g: 0.3260087, b: 0.22694911, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularColor: {r: 0.9433962, g: 0.6351978, b: 0.3693485, a: 1}
+    - _RimColor: {r: 68.61557, g: 55.06544, b: 21.622555, a: 1}
+    - _SpecularColor: {r: 2.297397, g: 1.7838612, b: 1.3333912, a: 0.8117647}
