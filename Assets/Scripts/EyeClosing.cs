@@ -38,7 +38,7 @@ public class EyeClosing : MonoBehaviour
             Random.Range(-_eyeShakeAmplitude, _eyeShakeAmplitude),
             _eye.transform.localPosition.z);
 
-        //_eye.transform.localScale = Vector3.one * Mathf.Lerp(_eye.transform.localScale.x, ShouldBeClosed ? 1f : 1f, Time.deltaTime * _fadeSpeed);
+        _eye.transform.localScale = Vector3.one * Mathf.Lerp(_eye.transform.localScale.x, ShouldBeClosed ? .7f : 1f, Time.deltaTime * _fadeSpeed);
 
         if (ShouldBeClosed)
             _mixer.FindSnapshot("Muffled").TransitionTo(.2f);
