@@ -44,8 +44,8 @@ Camera:
   m_GameObject: {fileID: 2600872302626831287}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.99734807, b: 0.8254717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -58,12 +58,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.01
+  far clip plane: 200
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -214,17 +214,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0009999939
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.020000005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3059999
+      value: 0.031
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
@@ -269,52 +269,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 30.191208
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 30.191204
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 30.191212
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: -5865163338561875921, guid: 69daae5e956bf774fa71645b49d65f45,
+    - target: {fileID: -4216859302048453862, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000016600405
-      objectReference: {fileID: 0}
-    - target: {fileID: -5865163338561875921, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6504535
-      objectReference: {fileID: 0}
-    - target: {fileID: -5865163338561875921, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.000000014216115
-      objectReference: {fileID: 0}
-    - target: {fileID: -5865163338561875921, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.75954604
-      objectReference: {fileID: 0}
-    - target: {fileID: -5865163338561875921, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -81.152
-      objectReference: {fileID: 0}
-    - target: {fileID: 2489302850876048126, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2489302850876048126, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
+      propertyPath: m_LocalScale.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
@@ -344,11 +309,6 @@ PrefabInstance:
     - target: {fileID: 7561110372842451503, guid: 69daae5e956bf774fa71645b49d65f45,
         type: 3}
       propertyPath: m_DirtyAABB
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 69daae5e956bf774fa71645b49d65f45,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

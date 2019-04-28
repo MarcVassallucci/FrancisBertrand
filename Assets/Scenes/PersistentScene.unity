@@ -435,6 +435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2187859976706671377, guid: 0464389bb8eda0a4ba97953baea13a4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2187859976706671381, guid: 0464389bb8eda0a4ba97953baea13a4d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -664,66 +669,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.99734807
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.8254717
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_Depth
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600872302626831285, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: far clip plane
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017333187115515482, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017333187115515482, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017333187115515482, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017333187115515482, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017333187115515482, guid: 1289faaecac51a2488ccee2d62a5717e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1289faaecac51a2488ccee2d62a5717e, type: 3}
 --- !u!4 &4493501503778332090
@@ -936,6 +881,11 @@ PrefabInstance:
       propertyPath: _eye
       value: 
       objectReference: {fileID: 198845312}
+    - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: _eyeShakeAmplitude
+      value: 0.0000775
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43bd1f986a41fb64780133c803a27921, type: 3}
 --- !u!1 &7107793461058106108
