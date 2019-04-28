@@ -15,10 +15,13 @@ MonoBehaviour:
   Question: Est-ce que tu approuves ?
   Duration: 10
   AudioTrackIndex: 0
-  FaceIndex: 0
+  FaceIndex: 1
   Yes:
     Reaction: Je savais que tu comprendrais.
+    FaceIndex: 0
   No:
     Reaction: Tu es un monstre. Je te deteste.
+    FaceIndex: 2
   NoAnswer:
     Reaction: Je ne pense pas qu'il puisse nous entendre...
+    FaceIndex: 0

@@ -77,6 +77,7 @@ public class Game : MonoBehaviour
         {
             if (TimeSinceQuestion > _currentDialog.Duration)
             {
+                _currentSpeaker.SetFace(_currentDialog.NoAnswer.FaceIndex);
                 _textController.SetText(_currentSpeaker, _currentDialog.NoAnswer.Reaction);
                 break;
             }
@@ -123,6 +124,7 @@ public class Game : MonoBehaviour
             return;
 
         _currentDialogHasAnswer = true;
+        _currentSpeaker.SetFace(IsYes ? _currentDialog.Yes.FaceIndex : _currentDialog.No.FaceIndex);
         _textController.SetText(_currentSpeaker, IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction);
     }
 }
