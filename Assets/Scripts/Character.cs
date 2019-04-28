@@ -24,7 +24,20 @@ public class Character : MonoBehaviour
         {
             if (mat.name.StartsWith("Face"))
             {
-                mat.mainTexture = _textures[FaceIndex];
+                if (FaceIndex < 0 || FaceIndex >= _textures.Length)
+                {
+                    Debug.LogErrorFormat(
+                        "{0} do not have a face texture of index {1}. " +
+                        "Please change the dialog settings.", 
+                        gameObject.name,
+                        FaceIndex);
+                    break;
+                }
+                else
+                {
+                    mat.mainTexture = _textures[FaceIndex];
+                }
+
                 break;
             }
         }
