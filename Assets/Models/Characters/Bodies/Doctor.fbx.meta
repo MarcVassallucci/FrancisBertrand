@@ -3,7 +3,47 @@ guid: f824aa32cb08b9149b7569d01bc2c199
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jacket
+    second: {fileID: 2100000, guid: bb691ff5c9b85c5459f4f4fb6d58258a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: e03ea4e97e40f8b46ab11f60b1123bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MoustacheDoc
+    second: {fileID: 2100000, guid: 7368b4611d2b77744a2e4c78dfc99f5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants
+    second: {fileID: 2100000, guid: f007817ee9280404ea454b55938f5f9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoesBlack
+    second: {fileID: 2100000, guid: b3cb4eba106337b438c6010ccc63a110, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinOlive
+    second: {fileID: 2100000, guid: 2b9a0d4cf648cff46aae95ffd9a557bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 7c6c58850da501647a69d1c9dcac689a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glasses
+    second: {fileID: 2100000, guid: 25e4f035169d03947992f3c52715b149, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

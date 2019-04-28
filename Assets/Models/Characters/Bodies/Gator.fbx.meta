@@ -3,7 +3,42 @@ guid: 0de0405986008494ca2909b3f09a9e8c
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jean
+    second: {fileID: 2100000, guid: 882f06ae17f81a04cabbbd3e4d188ab6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: e407dd92dd82132439b8f6f22c952726, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt01
+    second: {fileID: 2100000, guid: 0ce96df90cc28de47832054201d28751, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoesBlack
+    second: {fileID: 2100000, guid: 14a5e63bd0477814d8b55a0821dc6272, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinCroco
+    second: {fileID: 2100000, guid: 4218808f003c8174294f4884a8fc65a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Socks
+    second: {fileID: 2100000, guid: 91f4699036aec6e4fb90fb9041d7c810, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teeth
+    second: {fileID: 2100000, guid: 4a524c990d973ae44ba43decdeed3dd3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

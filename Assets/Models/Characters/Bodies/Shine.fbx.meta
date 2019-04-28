@@ -3,7 +3,42 @@ guid: ba3c1b85ba39cc14a9b12ef91f17ac0f
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkHair
+    second: {fileID: 2100000, guid: 3b35a7fa68124914c976f5596c2ad7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dress
+    second: {fileID: 2100000, guid: 92b71b561c7e61f4c8af321dcf0a3c5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HairAcessory
+    second: {fileID: 2100000, guid: efcd3c28d741e6b42a08b5a9c044aa2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 986f3eb2f6b99b64a9e558905e8e5a48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoesBlack
+    second: {fileID: 2100000, guid: 7883a9ea6d2080848b7d83d4f8bb1eb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinPale
+    second: {fileID: 2100000, guid: a24c8f09f41b5b34ca97635a6d8ef611, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Socks
+    second: {fileID: 2100000, guid: ef383abfc2cdc13459cfcd74d0e082db, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

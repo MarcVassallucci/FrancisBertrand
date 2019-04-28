@@ -3,7 +3,32 @@ guid: 92517e10f9ee2934295869de320c6e41
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 88b28c12c7c6f224a818de1c3a3caa14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: a3f6f0d13881a4e43ad42b565ac515c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin.001
+    second: {fileID: 2100000, guid: 4511ed8d86efcab46bec23c1ebeca188, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinCroco
+    second: {fileID: 2100000, guid: 0ebbb1a10b907db4cbed3a07cb69454d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teeth
+    second: {fileID: 2100000, guid: c4271bf59d7eebe49a17149b85afdefa, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
