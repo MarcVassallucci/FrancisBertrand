@@ -15,8 +15,8 @@ public enum GameState
 public class Game : MonoBehaviour
 {
     [SerializeField] float _timeBetweenScenes = 3f;
-    [SerializeField] TextMeshProUGUI _text = null;
     [SerializeField] AudioManager _audio = null;
+    [SerializeField] TextController _textController = null;
 
     GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
@@ -44,7 +44,7 @@ public class Game : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
             _currentDialogHasAnswer = false;
-            _text.text = "";
+            _textController.SetText("");
             yield return new WaitForSeconds(_timeBetweenScenes);
 
             ++_index;
@@ -65,14 +65,14 @@ public class Game : MonoBehaviour
         _currentDialog = Resources.Load<Dialog>("Scene" + _index);
 
         _audio.SetActiveTrack(_currentDialog.AudioTrackIndex);
-        _text.text = _currentDialog.Question;
+        _textController.SetText(_currentDialog.Question);
 
         float TimeSinceQuestion = 0f;
         while (true)
         {
             if (TimeSinceQuestion > _currentDialog.Duration)
             {
-                _text.text = _currentDialog.NoAnswer.Reaction;
+                _textController.SetText(_currentDialog.NoAnswer.Reaction);
                 break;
             }
 
@@ -118,6 +118,6 @@ public class Game : MonoBehaviour
             return;
 
         _currentDialogHasAnswer = true;
-        _text.text = IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction;
+        _textController.SetText(IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction);
     }
 }

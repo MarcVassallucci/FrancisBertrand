@@ -394,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 2187859976706671377, guid: 0464389bb8eda0a4ba97953baea13a4d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2187859977062699171, guid: 0464389bb8eda0a4ba97953baea13a4d,
         type: 3}
@@ -750,7 +750,7 @@ Transform:
   m_LocalScale: {x: 100.000046, y: 100.000084, z: 100.00005}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 169.327, y: -100.484985, z: -13.651001}
 --- !u!1001 &5817493252118589914
 PrefabInstance:
@@ -802,7 +802,7 @@ PrefabInstance:
     - target: {fileID: 4026264877302450312, guid: c4a10242015a7574cb389af9cc06fcab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4026264877302450312, guid: c4a10242015a7574cb389af9cc06fcab,
         type: 3}
@@ -860,11 +860,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6766146186500093990, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
-      propertyPath: _text
-      value: 
-      objectReference: {fileID: 1456122978}
-    - target: {fileID: 6766146186500093990, guid: 43bd1f986a41fb64780133c803a27921,
-        type: 3}
       propertyPath: _audio
       value: 
       objectReference: {fileID: 2889159776103473990}
@@ -883,11 +878,6 @@ PrefabInstance:
       propertyPath: _eye
       value: 
       objectReference: {fileID: 198845312}
-    - target: {fileID: 6766146186500093991, guid: 43bd1f986a41fb64780133c803a27921,
-        type: 3}
-      propertyPath: _fadeSpeed
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6766146186500093993, guid: 43bd1f986a41fb64780133c803a27921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -943,6 +933,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6766146187233506112, guid: 43bd1f986a41fb64780133c803a27921,
+        type: 3}
+      propertyPath: InnerText
+      value: 
+      objectReference: {fileID: 1456122978}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43bd1f986a41fb64780133c803a27921, type: 3}
 --- !u!1 &7107793461058106108
