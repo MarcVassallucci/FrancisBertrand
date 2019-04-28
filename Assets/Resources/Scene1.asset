@@ -15,6 +15,7 @@ MonoBehaviour:
   Question: Est-ce que tu approuves ?
   Duration: 10
   AudioTrackIndex: 0
+  FaceIndex: 0
   Yes:
     Reaction: Je savais que tu comprendrais.
   No:

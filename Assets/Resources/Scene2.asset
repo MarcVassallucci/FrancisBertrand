@@ -15,6 +15,7 @@ MonoBehaviour:
   Question: Tu aimes les crocodiles ?
   Duration: 10
   AudioTrackIndex: 1
+  FaceIndex: 1
   Yes:
     Reaction: Je savais que tu comprendrais.
   No:

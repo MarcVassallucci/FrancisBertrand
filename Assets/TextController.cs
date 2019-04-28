@@ -10,15 +10,18 @@ public class TextController : MonoBehaviour
     [SerializeField] AudioSource AudioSource = null;
     [SerializeField] AudioClip[] AudioClips = null;
 
-    public void SetText(string Text)
+    public void SetText(Character Speaker, string Text)
     {
         StopAllCoroutines();
-        StartCoroutine(WriteText(Text));
+
+        if (Speaker != null && Text != "")
+            StartCoroutine(WriteText(Speaker, Text));
+        else
+            InnerText.text = "";
     }
 
-    IEnumerator WriteText(string Text)
+    IEnumerator WriteText(Character Speaker, string Text)
     {
-        Character Speaker = null;
         InnerText.text = "";
         
         foreach (var c in Text.Split(' '))
@@ -27,10 +30,7 @@ public class TextController : MonoBehaviour
             
             AudioSource.clip = AudioClips[Random.Range(0, AudioClips.Length - 1)];
             AudioSource.Play();
-
-            if (Speaker == null)
-                Speaker = GameObject.FindObjectOfType<Character>();
-
+            
             // head animation
 
             float ElapsedTime = 0f;

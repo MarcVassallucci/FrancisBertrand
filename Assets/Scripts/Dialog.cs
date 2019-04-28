@@ -12,6 +12,8 @@ public class Dialog : ScriptableObject
 
     [Range(0, 4)]
     public int AudioTrackIndex = 0;
+    
+    public int FaceIndex = 0;
 
     public DialogOption Yes = new DialogOption("Je savais que tu comprendrais.");
     public DialogOption No = new DialogOption("Tu es un monstre. Je te deteste.");
