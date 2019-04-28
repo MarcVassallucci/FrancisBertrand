@@ -61,7 +61,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _totalTime: 10
-  _fadeSpeed: 7
+  _fadeSpeed: 5
+  _blinkSpeed: 30
+  _blinkDuration: 0.1
   _eyeShakeAmplitude: 0.0000775
   _energyBar: {fileID: 0}
   _game: {fileID: 6766146186500093990}
@@ -81,4 +83,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _game: {fileID: 6766146186500093990}
+  _eyeClosing: {fileID: 6766146186500093991}
   _maxTimeBetweenClicks: 0.2

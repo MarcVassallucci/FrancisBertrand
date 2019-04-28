@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Scene1
   m_EditorClassIdentifier: 
   Question: Est-ce que tu approuves ?
-  Duration: 5
+  Duration: 10
+  AudioTrackIndex: 0
   Yes:
     Reaction: Je savais que tu comprendrais.
   No:

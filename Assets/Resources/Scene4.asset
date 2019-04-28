@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scene4
   m_EditorClassIdentifier: 
   Question: Do you want to play with us? FOREVER AND EVER
-  Duration: 5
+  Duration: 10
   AudioTrackIndex: 4
   Yes:
     Reaction: Je savais que tu comprendrais.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Scene2
   m_EditorClassIdentifier: 
   Question: Tu aimes les crocodiles ?
-  Duration: 5
+  Duration: 10
   AudioTrackIndex: 1
   Yes:
     Reaction: Je savais que tu comprendrais.

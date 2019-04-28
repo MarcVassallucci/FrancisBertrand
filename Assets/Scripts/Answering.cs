@@ -5,6 +5,7 @@ using UnityEngine;
 public class Answering : MonoBehaviour
 {
     [SerializeField] Game _game = null;
+    [SerializeField] EyeClosing _eyeClosing = null;
     [SerializeField] float _maxTimeBetweenClicks = 0.2f;
 
     bool _hasClicked = false;
@@ -22,6 +23,8 @@ public class Answering : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            _eyeClosing.Close();
+
             if (_timeSinceLastClick <= _maxTimeBetweenClicks)
             {
                 _game.OnAnswer(false);

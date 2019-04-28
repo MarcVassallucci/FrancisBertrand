@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class EyeClosing : MonoBehaviour
 {
     [SerializeField] float _totalTime = 5f;
-    [SerializeField] float _fadeSpeed = 7f;
+    [SerializeField] public float _fadeSpeed = 7f;
+    [SerializeField] public float _blinkSpeed = 30f;
+    [SerializeField] public float _blinkDuration = .1f;
     [SerializeField] float _eyeShakeAmplitude = 0.0025f;
     [SerializeField] EnergyBar _energyBar = null;
     [SerializeField] Game _game = null;
@@ -18,12 +20,12 @@ public class EyeClosing : MonoBehaviour
     float _usedTime = 0;
 
     bool _forcedShut = false;
-    public bool ForcedShut { get => _forcedShut; set => _forcedShut = value; }
 
     void Update()
     {
         bool ShouldBeClosed = _game.State != GameState.Scene
-            || Input.GetKey(KeyCode.Space) == false;
+            || Input.GetKey(KeyCode.Space) == false
+            || _forcedShut;
 
         _blackOverlay.color = Color.Lerp(_blackOverlay.color,
             ShouldBeClosed ? Color.black : new Color(0f, 0f, 0f, 0f),
@@ -57,5 +59,27 @@ public class EyeClosing : MonoBehaviour
                 _game.LoadFinalScene();
             }
         }
+    }
+    
+    public void Close()
+    {
+        StopAllCoroutines();
+        StartCoroutine(CloseInternal());
+    }
+
+    IEnumerator CloseInternal()
+    {
+        float InitialFadeSpeed = _fadeSpeed;
+
+        _forcedShut = true;
+        _fadeSpeed = _blinkSpeed;
+
+        yield return new WaitForSeconds(_blinkDuration * .5f);
+
+        _forcedShut = false;
+
+        yield return new WaitForSeconds(_blinkDuration *.5f);
+
+        _fadeSpeed = InitialFadeSpeed;
     }
 }
