@@ -4,17 +4,14 @@ ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
   - first:
-      74: 1915376560630787110
-    second: PlayerRig|ADDITIVE_ArmsSurprise
-  - first:
       74: -5056965181004721475
     second: PlayerRig|ADDITIVE_Breathing
   - first:
+      74: -8394921344984001528
+    second: PlayerRig|ADDITIVE_Breathing.001
+  - first:
       74: -259674542477400606
     second: PlayerRig|ADDITIVE_RockHead
-  - first:
-      74: 5921787225644706388
-    second: PlayerRig|ADDITIVE_Talk
   - first:
       74: 4489906251734758533
     second: PlayerRig|BoyOnBed
@@ -25,9 +22,6 @@ ModelImporter:
       74: -6716573856977893428
     second: PlayerRig|Finalscene01
   - first:
-      74: 4659861983791293560
-    second: PlayerRig|FinalScene02
-  - first:
       74: 3395493987423225441
     second: PlayerRig|FinalScene03
   - first:
@@ -36,9 +30,6 @@ ModelImporter:
   - first:
       74: -6731499011185911875
     second: PlayerRig|Hallucination
-  - first:
-      74: -8640844517178754665
-    second: PlayerRig|KidRigAction
   - first:
       74: 6693035487242572792
     second: PlayerRig|ShiningTwins
@@ -51,12 +42,6 @@ ModelImporter:
   - first:
       74: 1425928633757376796
     second: PlayerRig|Surprise01
-  - first:
-      74: -8600175910696314847
-    second: PlayerRig|Surprise02
-  - first:
-      74: 4202190135036080916
-    second: PlayerRig|Surprise03
   - first:
       74: -2837208769982665106
     second: PlayerRig|T-Pose
@@ -89,11 +74,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: PlayerRig|ADDITIVE_ArmsSurprise
-      takeName: PlayerRig|ADDITIVE_ArmsSurprise
-      internalID: 1915376560630787110
+      name: PlayerRig|ADDITIVE_Breathing
+      takeName: PlayerRig|ADDITIVE_Breathing
+      internalID: -5056965181004721475
       firstFrame: 0
-      lastFrame: 22
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -118,11 +103,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: PlayerRig|ADDITIVE_Breathing
-      takeName: PlayerRig|ADDITIVE_Breathing
-      internalID: -5056965181004721475
+      name: PlayerRig|ADDITIVE_Breathing.001
+      takeName: PlayerRig|ADDITIVE_Breathing.001
+      internalID: -8394921344984001528
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -152,35 +137,6 @@ ModelImporter:
       internalID: -259674542477400606
       firstFrame: 0
       lastFrame: 28
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PlayerRig|ADDITIVE_Talk
-      takeName: PlayerRig|ADDITIVE_Talk
-      internalID: 5921787225644706388
-      firstFrame: 0
-      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -292,35 +248,6 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: PlayerRig|FinalScene02
-      takeName: PlayerRig|FinalScene02
-      internalID: 4659861983791293560
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: PlayerRig|FinalScene03
       takeName: PlayerRig|FinalScene03
       internalID: 3395493987423225441
@@ -382,35 +309,6 @@ ModelImporter:
       name: PlayerRig|Hallucination
       takeName: PlayerRig|Hallucination
       internalID: -6731499011185911875
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PlayerRig|KidRigAction
-      takeName: PlayerRig|KidRigAction
-      internalID: -8640844517178754665
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -527,64 +425,6 @@ ModelImporter:
       name: PlayerRig|Surprise01
       takeName: PlayerRig|Surprise01
       internalID: 1425928633757376796
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PlayerRig|Surprise02
-      takeName: PlayerRig|Surprise02
-      internalID: -8600175910696314847
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PlayerRig|Surprise03
-      takeName: PlayerRig|Surprise03
-      internalID: 4202190135036080916
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
