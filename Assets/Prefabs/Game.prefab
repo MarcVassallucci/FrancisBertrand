@@ -84,4 +84,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _game: {fileID: 6766146186500093990}
   _eyeClosing: {fileID: 6766146186500093991}
-  _maxTimeBetweenClicks: 0.2
+  _maxTimeBetweenClicks: 1
