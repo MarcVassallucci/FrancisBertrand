@@ -16,6 +16,7 @@ public class Game : MonoBehaviour
 {
     [SerializeField] float _timeBetweenScenes = 3f;
     [SerializeField] TextMeshProUGUI _text = null;
+    [SerializeField] AudioManager _audio = null;
 
     GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
@@ -62,6 +63,8 @@ public class Game : MonoBehaviour
         SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
         
         _currentDialog = Resources.Load<Dialog>("Scene" + _index);
+
+        _audio.SetActiveTrack(_currentDialog.AudioTrackIndex);
         _text.text = _currentDialog.Question;
 
         float TimeSinceQuestion = 0f;

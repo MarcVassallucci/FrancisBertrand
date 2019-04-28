@@ -10,6 +10,9 @@ public class Dialog : ScriptableObject
     
     public float Duration = 5f;
 
+    [Range(0, 4)]
+    public int AudioTrackIndex = 0;
+
     public DialogOption Yes = new DialogOption("Je savais que tu comprendrais.");
     public DialogOption No = new DialogOption("Tu es un monstre. Je te deteste.");
     public DialogOption NoAnswer = new DialogOption("Je ne pense pas qu'il puisse nous entendre...");

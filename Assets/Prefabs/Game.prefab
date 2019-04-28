@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6766146186500093993}
   - component: {fileID: 6766146186500093990}
   - component: {fileID: 6766146186500093991}
+  - component: {fileID: 2094598938}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -44,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f93f5378fae0a684fa12d1d541b8708a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 0}
+  _timeBetweenScenes: 3
+  _text: {fileID: 0}
+  _audio: {fileID: 0}
 --- !u!114 &6766146186500093991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,7 +60,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb7ce16810e77a438a7250edc799085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _totalTime: 10
+  _fadeSpeed: 7
+  _eyeShakeAmplitude: 0.0000775
   _energyBar: {fileID: 0}
   _game: {fileID: 6766146186500093990}
   _blackOverlay: {fileID: 0}
-  _totalTime: 2
+  _eye: {fileID: 0}
+  _mixer: {fileID: 24100000, guid: 9dfe47ba1ee9f9f46834a19601d8781b, type: 2}
+--- !u!114 &2094598938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766146186500093992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0116a88ae06729a4b88e657ea086bb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _game: {fileID: 6766146186500093990}
+  _maxTimeBetweenClicks: 0.2
