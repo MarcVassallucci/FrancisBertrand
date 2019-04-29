@@ -17,10 +17,11 @@ MonoBehaviour:
   AudioTrackIndex: 4
   FaceIndex: 0
   Yes:
-    Reaction: For ever. And ever.
+    Reaction: For ever. And ever.For ever. And ever.For ever. And ever.For ever. And
+      ever.
     FaceIndex: 0
   No:
-    Reaction: For Ever. And ever.
+    Reaction: Come play with us.
     FaceIndex: 0
   NoAnswer:
     Reaction: For Ever. And ever.

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
-  m_Name: Scene5
+  m_Name: Scene6
   m_EditorClassIdentifier: 
-  Question: 'What''s the matter, tough guy? Are you going to abandon your family? '
+  Question: That bitch Alicia found someone else! What the fuck, Imma right?
   Duration: 10
-  AudioTrackIndex: 3
+  AudioTrackIndex: 0
   FaceIndex: 0
   Yes:
-    Reaction: How can you do that to me...
+    Reaction: That's my dad! I do deserve to taste happiness!
     FaceIndex: 0
   No:
-    Reaction: That's the spirit son! Keep it tight!
+    Reaction: I swear if I want to! Asshole.
     FaceIndex: 0
   NoAnswer:
-    Reaction: Well just know that your father loves you.
+    Reaction: Anyway, I'll fuck off!
     FaceIndex: 0
