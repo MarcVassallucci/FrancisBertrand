@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene1
   m_EditorClassIdentifier: 
-  Question: Est-ce que tu approuves ?
+  Question: Do you want to see your family? Blink once for yes, twice for no.
   Duration: 10
   AudioTrackIndex: 0
-  FaceIndex: 1
+  FaceIndex: 0
   Yes:
-    Reaction: Je savais que tu comprendrais.
+    Reaction: Good, they'll come one by one.
     FaceIndex: 0
   No:
-    Reaction: Tu es un monstre. Je te deteste.
-    FaceIndex: 2
+    Reaction: Hum, well... they are here. Don't overwork your heart.
+    FaceIndex: 0
   NoAnswer:
-    Reaction: Je ne pense pas qu'il puisse nous entendre...
+    Reaction: It's ok, you need to rest.
     FaceIndex: 0

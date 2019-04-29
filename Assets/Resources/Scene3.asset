@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene3
   m_EditorClassIdentifier: 
-  Question: Je veux le faire mais je veux savoir ce que tu en penses.
+  Question: I went to the hairdresser today, just for you. Do you like my new haircut?
   Duration: 10
   AudioTrackIndex: 3
+  FaceIndex: 0
   Yes:
-    Reaction: Je savais que tu comprendrais.
+    Reaction: When you'll leave the hospital, you'll enjoy another thing darling!
+    FaceIndex: 2
   No:
-    Reaction: Tu es un monstre. Je te deteste.
+    Reaction: ' Well, i leave you, you can die alone here!'
+    FaceIndex: 3
   NoAnswer:
-    Reaction: Je ne pense pas qu'il puisse nous entendre...
+    Reaction: Ok, rest then...
+    FaceIndex: 0
