@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: That bitch! Alicia found someone else! What the fuck, Imma right?
   Duration: 10
-  AudioTrackIndex: 0
+  AudioTrackIndex: 3
   FaceIndex: 0
   Yes:
     Reaction: That's my dad! I do deserve to taste happiness!

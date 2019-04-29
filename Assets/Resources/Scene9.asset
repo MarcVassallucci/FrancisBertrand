@@ -15,7 +15,7 @@ MonoBehaviour:
   Question: What a hurly-burly in this hospital. I can never have rest. You're my
     favorite patient. You know why?
   Duration: 15
-  AudioTrackIndex: 0
+  AudioTrackIndex: 2
   FaceIndex: 0
   Yes:
     Reaction: Calm and really smart. You're perfect!

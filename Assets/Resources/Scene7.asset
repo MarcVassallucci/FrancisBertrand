@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: Yeah we can do it in here. The guy's a vegetable.
   Duration: 5
-  AudioTrackIndex: 0
+  AudioTrackIndex: 1
   FaceIndex: 0
   Yes:
     Reaction: See, that's all he can do. Now come here and taste MY veggie.
