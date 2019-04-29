@@ -15,13 +15,13 @@ MonoBehaviour:
   Question: 'What''s the matter, tough guy? Are you going to abandon your family? '
   Duration: 10
   AudioTrackIndex: 3
-  FaceIndex: 0
+  FaceIndex: 2
   Yes:
     Reaction: How can you do that to me...
     FaceIndex: 0
   No:
     Reaction: That's the spirit son! Keep it tight!
-    FaceIndex: 0
+    FaceIndex: 1
   NoAnswer:
-    Reaction: Well just know that your father loves you.
-    FaceIndex: 0
+    Reaction: Well... just know that your father loves you.
+    FaceIndex: 2

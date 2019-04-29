@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
-  m_Name: Scene8
+  m_Name: Scene9
   m_EditorClassIdentifier: 
-  Question: Today is a great day. We have a surprise for you. Do you want to know
-    what it is?
+  Question: What a hurly-burly in this hospital. I can never have rest. You're my
+    favorite patient. You know why?
   Duration: 15
   AudioTrackIndex: 0
   FaceIndex: 0
   Yes:
-    Reaction: The doctors agreed to unplug you. You can die worthily.
+    Reaction: Calm and really smart. You're perfect!
     FaceIndex: 1
   No:
-    Reaction: Everybody out, Let him die alone.
+    Reaction: Well, because you can't tell anyone about what I do in here.
     FaceIndex: 2
   NoAnswer:
-    Reaction: Oh ok... we'll come back later.
+    Reaction: Good idea, i'll take a nap too.
     FaceIndex: 0

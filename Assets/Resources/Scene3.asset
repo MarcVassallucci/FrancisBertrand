@@ -20,7 +20,7 @@ MonoBehaviour:
     Reaction: When you'll leave the hospital, you'll enjoy another thing darling!
     FaceIndex: 2
   No:
-    Reaction: ' Well, i leave you, you can die alone here!'
+    Reaction: ' Well, i leave you, you can die alone!'
     FaceIndex: 3
   NoAnswer:
     Reaction: Ok, rest then...

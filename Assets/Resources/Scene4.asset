@@ -21,8 +21,8 @@ MonoBehaviour:
       ever.
     FaceIndex: 0
   No:
-    Reaction: Come play with us.
+    Reaction: Bad Francis.
     FaceIndex: 0
   NoAnswer:
-    Reaction: For Ever. And ever.
+    Reaction: We will come back.
     FaceIndex: 0

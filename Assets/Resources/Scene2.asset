@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Scene2
   m_EditorClassIdentifier: 
   Question: Dad, I want you to meet Rudolf, we'll get married. Do you approve?
-  Duration: 10
+  Duration: 13
   AudioTrackIndex: 0
   FaceIndex: 1
   Yes:
     Reaction: Oh if you could be there. Now we can have a beautiful crocobaby.
     FaceIndex: 0
   No:
-    Reaction: I don't know why I bother. I'll have a lots of crocobabies!
+    Reaction: I don't know why I bother. I'll have lots of crocobabies!
     FaceIndex: 2
   NoAnswer:
     Reaction: Let's go darling. I don't think he can hear us.
