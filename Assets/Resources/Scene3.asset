@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Scene3
   m_EditorClassIdentifier: 
   Question: I went to the hairdresser today, just for you. Do you like my new haircut?
-  Duration: 10
+  Voice: {fileID: 8300000, guid: a3bf040d97c4e31449bf47193746d92b, type: 3}
   AudioTrackIndex: 3
-  FaceIndex: 0
+  Duration: 0
   Yes:
-    Reaction: When you'll leave the hospital, you'll enjoy another thing darling!
-    FaceIndex: 2
+    Reaction: 'You''ll enjoy another thing darling...
+
+'
+    Voice: {fileID: 8300000, guid: a223b5e072bcdd14c8acb4ae073d7ac3, type: 3}
   No:
-    Reaction: ' Well, i leave you, you can die alone!'
-    FaceIndex: 3
+    Reaction: ' Well, I leave you, you can die alone here !'
+    Voice: {fileID: 8300000, guid: a80aefcc4fd753547919d3376b1855ee, type: 3}
   NoAnswer:
     Reaction: Ok, rest then...
-    FaceIndex: 0
+    Voice: {fileID: 0}

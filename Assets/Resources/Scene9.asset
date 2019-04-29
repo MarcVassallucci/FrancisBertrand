@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene9
   m_EditorClassIdentifier: 
-  Question: What a hurly-burly in this hospital. I can never have rest. You're my
-    favorite patient. You know why?
-  Duration: 15
+  Question: I can't never have rest in this hospital. You know, you're my favorite
+    patient. And do you know why ?
+  Voice: {fileID: 8300000, guid: 8df529675e7435944bf7be6ce616c312, type: 3}
   AudioTrackIndex: 2
-  FaceIndex: 0
+  Duration: 0
   Yes:
-    Reaction: Calm and really smart. You're perfect!
-    FaceIndex: 1
+    Reaction: You're the calmest on earth and realy smart. You're perfect !
+    Voice: {fileID: 8300000, guid: e8d2f31c25d1dbd46a85b93c51f2440f, type: 3}
   No:
-    Reaction: Well, because you can't tell anyone about what I do in here.
-    FaceIndex: 2
+    Reaction: Stay ignorant !
+    Voice: {fileID: 8300000, guid: b6f7a82b054346c4ebc3481637b63cbe, type: 3}
   NoAnswer:
     Reaction: Good idea, i'll take a nap too.
-    FaceIndex: 0
+    Voice: {fileID: 0}

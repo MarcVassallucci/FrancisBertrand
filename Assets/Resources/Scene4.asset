@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene4
   m_EditorClassIdentifier: 
-  Question: Come play with us, Francis.
-  Duration: 10
+  Question: Do you want to play with us ?
+  Voice: {fileID: 8300000, guid: 2a78f9cf7226a8145859a444cf881568, type: 3}
   AudioTrackIndex: 4
-  FaceIndex: 0
+  Duration: 0
   Yes:
-    Reaction: For ever. And ever.For ever. And ever.For ever. And ever.For ever. And
-      ever.
-    FaceIndex: 0
+    Reaction: For ever. And ever. For ever. And ever. For ever. And ever. For ever.
+      And ever.
+    Voice: {fileID: 0}
   No:
     Reaction: Bad Francis.
-    FaceIndex: 0
+    Voice: {fileID: 0}
   NoAnswer:
     Reaction: We will come back.
-    FaceIndex: 0
+    Voice: {fileID: 0}

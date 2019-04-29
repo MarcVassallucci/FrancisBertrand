@@ -15,9 +15,10 @@ public enum GameState
 public class Game : MonoBehaviour
 {
     [SerializeField] float _timeBetweenScenes = 3f;
+    [SerializeField] float _timeToAnswer = 4f;
     [SerializeField] AudioManager _audio = null;
     [SerializeField] TextController _textController = null;
-
+    [SerializeField] AudioSource _voiceAudioSource = null;
     GameState _state = GameState.Transition;
     public GameState State { get => _state; private set => _state = value; }
 
@@ -25,6 +26,7 @@ public class Game : MonoBehaviour
     Dialog _currentDialog = null;   
     bool _currentDialogHasAnswer = false;
     Character _currentSpeaker;
+    float _answerDuration;
 
     void Start()
     {
@@ -66,29 +68,45 @@ public class Game : MonoBehaviour
             yield return null;
 
         _currentDialog = Resources.Load<Dialog>("Scene" + _index);
-
+        PlayVoiceAudio(_currentDialog.Voice);
         _currentSpeaker = GameObject.FindObjectOfType<Character>();
-        _currentSpeaker.SetFace(_currentDialog.FaceIndex);
         _audio.SetActiveTrack(_currentDialog.AudioTrackIndex);
         _textController.SetText(_currentSpeaker, _currentDialog.Question);
 
         float TimeSinceQuestion = 0f;
+        float Duration = _currentDialog.Voice != null ? _currentDialog.Voice.length + _timeToAnswer : _currentDialog.Duration;
         while (true)
         {
-            if (TimeSinceQuestion > _currentDialog.Duration)
+            if (TimeSinceQuestion > Duration)
             {
-                _currentSpeaker.SetFace(_currentDialog.NoAnswer.FaceIndex);
                 _textController.SetText(_currentSpeaker, _currentDialog.NoAnswer.Reaction);
+                PlayVoiceAudio(_currentDialog.NoAnswer.Voice);
+
+                if (_currentDialog.NoAnswer.Voice != null)
+                    yield return new WaitForSeconds(_currentDialog.NoAnswer.Voice.length);
+                else
+                    yield return new WaitForSeconds(2f);
+
                 break;
             }
 
             if (_currentDialogHasAnswer == true)
             {
+                yield return new WaitForSeconds(_answerDuration);
                 break;
             }
 
             yield return null;
             TimeSinceQuestion += Time.deltaTime;
+        }
+    }
+
+    private void PlayVoiceAudio(AudioClip voice)
+    {
+        if (voice != null)
+        {
+            _voiceAudioSource.clip = voice;
+            _voiceAudioSource.Play();
         }
     }
 
@@ -124,7 +142,26 @@ public class Game : MonoBehaviour
             return;
 
         _currentDialogHasAnswer = true;
-        _currentSpeaker.SetFace(IsYes ? _currentDialog.Yes.FaceIndex : _currentDialog.No.FaceIndex);
+        Debug.Assert(_currentSpeaker != null);
+        UpdateCharacters(IsYes);
+
+        if (IsYes == true && _currentDialog.Yes.Voice != null)
+            _answerDuration = _currentDialog.Yes.Voice.length;
+        else if (IsYes == false && _currentDialog.No.Voice != null)
+            _answerDuration = _currentDialog.No.Voice.length;
+        else
+            _answerDuration = 2f;
+
         _textController.SetText(_currentSpeaker, IsYes ? _currentDialog.Yes.Reaction : _currentDialog.No.Reaction);
+        PlayVoiceAudio(IsYes ? _currentDialog.Yes.Voice : _currentDialog.No.Voice);
+    }
+
+    private void UpdateCharacters(bool IsYes)
+    {
+        foreach (Character Character in GameObject.FindObjectsOfType<Character>())
+        {
+            foreach (FaceChange FaceChange in Character.GetComponents<FaceChange>())
+                FaceChange.SetFace(IsYes);
+        }
     }
 }

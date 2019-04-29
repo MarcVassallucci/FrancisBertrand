@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene5
   m_EditorClassIdentifier: 
-  Question: 'What''s the matter, tough guy? Are you going to abandon your family? '
-  Duration: 10
+  Question: What's the matter, tough guy ? Do you go to abandon your family ? Would
+    you do like me ?
+  Voice: {fileID: 8300000, guid: 4f1295bbc7faa81418fb9f8b9b70dc75, type: 3}
   AudioTrackIndex: 3
-  FaceIndex: 2
+  Duration: 0
   Yes:
-    Reaction: How can you do that to me...
-    FaceIndex: 0
+    Reaction: You're on the highway to paradise, I'm proud of you son!
+    Voice: {fileID: 8300000, guid: 7261ea04beb4a494599db35dc1edb1ec, type: 3}
   No:
-    Reaction: That's the spirit son! Keep it tight!
-    FaceIndex: 1
+    Reaction: ' Honestly, I''m not your real father.'
+    Voice: {fileID: 8300000, guid: d6b19698624bb5246b7e81128437d46f, type: 3}
   NoAnswer:
     Reaction: Well... just know that your father loves you.
-    FaceIndex: 2
+    Voice: {fileID: 0}

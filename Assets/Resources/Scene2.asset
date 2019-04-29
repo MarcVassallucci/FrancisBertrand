@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene2
   m_EditorClassIdentifier: 
-  Question: Dad, I want you to meet Rudolf, we'll get married. Do you approve?
-  Duration: 13
+  Question: Dad, I introduce you Rudolf, we'll get married. Nevertheless I'd like
+    to invite you. Would you be with us ?
+  Voice: {fileID: 8300000, guid: 3859b7bea0bc2c246ae7eaa62eb4c907, type: 3}
   AudioTrackIndex: 0
-  FaceIndex: 1
+  Duration: 0
   Yes:
-    Reaction: Oh if you could be there. Now we can have a beautiful crocobaby.
-    FaceIndex: 0
+    Reaction: Oh you're awesome. Now we can have a beautiful crocobaby.
+    Voice: {fileID: 8300000, guid: e73a7c94f90e57a4099309a610a01f9f, type: 3}
   No:
-    Reaction: I don't know why I bother. I'll have lots of crocobabies!
-    FaceIndex: 2
+    Reaction: I don't care about you ! I will make a lot of cute crocochildren !
+    Voice: {fileID: 8300000, guid: 2c48f1a2c4bfa4d4aa3648f02e63167b, type: 3}
   NoAnswer:
-    Reaction: Let's go darling. I don't think he can hear us.
-    FaceIndex: 1
+    Reaction: Let's go darling, he can't hear you !
+    Voice: {fileID: 8300000, guid: 36371c78d2ff65d4fb7ae865a8f58bc5, type: 3}

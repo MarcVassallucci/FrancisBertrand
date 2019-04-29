@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12280895143d0db46b27ffd0a72d4332, type: 3}
   m_Name: Scene8
   m_EditorClassIdentifier: 
-  Question: Today is a great day. We have a surprise for you. Do you want to know
-    what it is?
-  Duration: 15
+  Question: Maybe you don't know but today is a great day. And we have a surprise
+    for you. Would you see it ?
+  Voice: {fileID: 8300000, guid: d605a748ae64f144b9433b25a29ba926, type: 3}
   AudioTrackIndex: 4
-  FaceIndex: 0
+  Duration: 0
   Yes:
-    Reaction: The doctors agreed to unplug you. You can die worthily.
-    FaceIndex: 1
+    Reaction: The doctors agree to unplug you. You can die worthily.
+    Voice: {fileID: 8300000, guid: 0e9c856e45e1d7244ab8e18acf3759fa, type: 3}
   No:
-    Reaction: Everybody out, Let him die alone.
-    FaceIndex: 2
+    Reaction: So everybody out, let's make the party in another place. Let him die
+      alone.
+    Voice: {fileID: 8300000, guid: 721e635f106ec9e4bbc5d510af622911, type: 3}
   NoAnswer:
     Reaction: Oh ok... we'll come back later.
-    FaceIndex: 0
+    Voice: {fileID: 0}

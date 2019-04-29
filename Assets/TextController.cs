@@ -22,26 +22,28 @@ public class TextController : MonoBehaviour
 
     IEnumerator WriteText(Character Speaker, string Text)
     {
-        InnerText.text = "";
+        InnerText.text = Text;
+        yield return null;
+    //    InnerText.text = "";
         
-        foreach (var c in Text.Split(' '))
-        {
-            InnerText.text += c + " ";
+    //    foreach (var c in Text.Split(' '))
+    //    {
+    //        InnerText.text += c + " ";
             
-            AudioSource.clip = AudioClips[Random.Range(0, AudioClips.Length - 1)];
-            AudioSource.Play();
+    //        //AudioSource.clip = AudioClips[Random.Range(0, AudioClips.Length - 1)];
+    //        //AudioSource.Play();
             
-            // head animation
+    //        // head animation
 
-            float ElapsedTime = 0f;
-            while (ElapsedTime < _delay)
-            {
-                if (Speaker != null)
-                    Speaker.SetWordNormalizedTime(ElapsedTime / _delay);
+    //        float ElapsedTime = 0f;
+    //        while (ElapsedTime < _delay)
+    //        {
+    //            if (Speaker != null)
+    //                Speaker.SetWordNormalizedTime(ElapsedTime / _delay);
                 
-                yield return null;
-                ElapsedTime += Time.deltaTime;
-            }
-        }
+    //            yield return null;
+    //            ElapsedTime += Time.deltaTime;
+    //        }
+    //    }
     }
 }

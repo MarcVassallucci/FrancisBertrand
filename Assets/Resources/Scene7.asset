@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Scene7
   m_EditorClassIdentifier: 
   Question: Yeah we can do it in here. The guy's a vegetable.
-  Duration: 5
+  Voice: {fileID: 0}
   AudioTrackIndex: 1
-  FaceIndex: 0
+  Duration: 5
   Yes:
     Reaction: See, that's all he can do. Now come here and taste MY veggie.
-    FaceIndex: 0
+    Voice: {fileID: 0}
   No:
     Reaction: See, that's all he can do. Now come here and taste MY veggie.
-    FaceIndex: 0
+    Voice: {fileID: 0}
   NoAnswer:
     Reaction: Now come here and taste MY veggie.
-    FaceIndex: 0
+    Voice: {fileID: 0}
