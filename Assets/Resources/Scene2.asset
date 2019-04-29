@@ -18,7 +18,10 @@ MonoBehaviour:
   FaceIndex: 1
   Yes:
     Reaction: Je savais que tu comprendrais.
+    FaceIndex: 0
   No:
     Reaction: Tu es un monstre. Je te deteste.
+    FaceIndex: 0
   NoAnswer:
-    Reaction: Je ne pense pas qu'il puisse nous entendre...
+    Reaction: "C'est \xE7a... ignore moi."
+    FaceIndex: 0
