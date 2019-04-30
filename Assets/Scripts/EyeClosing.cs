@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class EyeClosing : MonoBehaviour
 {
-    [SerializeField] float _totalTime = 5f;
+    [SerializeField] float _totalTime = 10f;
     [SerializeField] public float _fadeSpeed = 7f;
     [SerializeField] public float _blinkSpeed = 30f;
     [SerializeField] public float _blinkDuration = .1f;
@@ -17,8 +17,9 @@ public class EyeClosing : MonoBehaviour
     [SerializeField] SkinnedMeshRenderer _eye = null;
     [SerializeField] AudioMixer _mixer = null;
 
-    float _usedTime = 0;
+    [HideInInspector] public bool _paused = true;
 
+    float _usedTime = 0;
     bool _forcedShut = false;
 
     void Update()
@@ -49,7 +50,7 @@ public class EyeClosing : MonoBehaviour
 
         _energyBar.SetIsInDanger(!ShouldBeClosed);
 
-        if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space))
+        if (_game.State == GameState.Scene && Input.GetKey(KeyCode.Space) && _paused == false)
         {
             _usedTime += Time.deltaTime;
             _energyBar.SetRatio(1f - (_usedTime / _totalTime));

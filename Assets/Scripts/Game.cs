@@ -44,6 +44,7 @@ public class Game : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
             State = GameState.Transition;
+
             yield return new WaitForSeconds(.5f);
             SceneManager.UnloadSceneAsync("Scene" + _index);
             _currentDialogHasAnswer = false;
@@ -63,6 +64,11 @@ public class Game : MonoBehaviour
     
     IEnumerator PlayNextScene()
     {
+        // BEGIN HACK
+        if (_index == 2)
+            GetComponent<EyeClosing>()._paused = false;
+        // END HACK
+
         var Async = SceneManager.LoadSceneAsync("Scene" + _index, LoadSceneMode.Additive);
         while (Async.isDone == false)
             yield return null;
@@ -92,6 +98,14 @@ public class Game : MonoBehaviour
 
             if (_currentDialogHasAnswer == true)
             {
+                // BEGIN HACK
+                if (_index == 1)
+                {
+                    yield return new WaitForSeconds(6f);
+                    break;
+                }
+                // END HACK
+
                 yield return new WaitForSeconds(_answerDuration);
                 break;
             }

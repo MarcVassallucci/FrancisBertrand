@@ -18,7 +18,7 @@ MonoBehaviour:
   AudioTrackIndex: 0
   Duration: 0
   Yes:
-    Reaction: Oh you're awesome. Now we can have a beautiful crocobaby.
+    Reaction: Oh you're awesome. Now we can have a beautiful crocochild.
     Voice: {fileID: 8300000, guid: e73a7c94f90e57a4099309a610a01f9f, type: 3}
   No:
     Reaction: I don't care about you ! I will make a lot of cute crocochildren !

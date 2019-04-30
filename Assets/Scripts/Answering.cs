@@ -7,6 +7,7 @@ public class Answering : MonoBehaviour
     [SerializeField] Game _game = null;
     [SerializeField] EyeClosing _eyeClosing = null;
     [SerializeField] float _maxTimeBetweenClicks = 0.2f;
+    [SerializeField] SkinnedMeshRenderer _eye = null;
 
     bool _hasClicked = false;
     float _timeSinceLastClick = 0f;
@@ -18,10 +19,10 @@ public class Answering : MonoBehaviour
             _hasClicked = false;
             _timeSinceLastClick = 0f;
         }
-
+        
         _timeSinceLastClick += Time.deltaTime;
-
-        if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0) && _eye.GetBlendShapeWeight(0) < 90f)
         {
             _eyeClosing.Close();
 

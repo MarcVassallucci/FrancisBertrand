@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBetweenScenes: 3
+  _timeToAnswer: 4
   _audio: {fileID: 0}
   _textController: {fileID: 6766146187233506112}
   _voiceAudioSource: {fileID: 670001689}
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb7ce16810e77a438a7250edc799085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _totalTime: 100
+  _totalTime: 10
   _fadeSpeed: 7
   _blinkSpeed: 30
   _blinkDuration: 0.1
@@ -74,6 +75,7 @@ MonoBehaviour:
   _blackOverlay: {fileID: 0}
   _eye: {fileID: 0}
   _mixer: {fileID: 24100000, guid: 9dfe47ba1ee9f9f46834a19601d8781b, type: 2}
+  _paused: 1
 --- !u!114 &2094598938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +91,7 @@ MonoBehaviour:
   _game: {fileID: 6766146186500093990}
   _eyeClosing: {fileID: 6766146186500093991}
   _maxTimeBetweenClicks: 0.5
+  _eye: {fileID: 0}
 --- !u!114 &6766146187233506112
 MonoBehaviour:
   m_ObjectHideFlags: 0
